@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+<div class="container pt">
+    <div class="row mt centered">
+        {% load static %}
+      <div class="col-lg-4">
+        <a class="zoom green imgCg" href="{% url 'home:online' %}"><img class="img-responsive" src='{% static "static_img/WoWFisico.jpg" %}' alt="" width="400px" height="300px" /></a>
+        <p>Juegos de Cartas</p>
+      </div>
+      <div class="col-lg-4">
+        <a class="zoom green imgCg" href="{% url 'home:fisico' %}"><img class="img-responsive" src='{% static "static_img/mesa.jpg" %}' alt="" width="400px" height="300px"/></a>
+        <p>Juegos de Mesa</p>
+      </div>
+    </div><!-- /row -->
+  </div><!-- /container -->
+
+{% endblock %}

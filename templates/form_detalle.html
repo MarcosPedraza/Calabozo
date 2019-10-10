@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<!-- +++++ Post +++++ -->
+	<div id="white">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<p><img src='{% static "static_img/user.png" %}' width="50px" height="50px"> <ba>Nombre de Usuario</ba></p>
+					<p><bd>{{obj.fecha}}</bd></p>
+					<h4>{{ obj.titulo }}</h4>
+					{%if obj.imagen %}
+					<p><img class="img-responsive" src="{{ obj.imagen.url }}" alt=""></p>
+					{% endif %}
+					<p>{{obj.descripcion}} </p>
+					<br>
+					<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+					<p><bt>TAGS: <a href="#">esto es un tag</a> - <a href="#">Otro Tag</a></bt></p>
+					<hr>
+					<p><a href="#">#Comentarios</a></p>
+					<div class="fb-comments" data-href="{{ request.build_absolute_uri }}" data-numposts="5"></div>
+				</div>
+
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /white -->
+
+
+{% endblock %}

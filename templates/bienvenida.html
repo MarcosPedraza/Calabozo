@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{%block contenido%}
+<!-- +++++ pagina bienvenida +++++ -->
+	<div id="ww">
+	    <div class="container">
+
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 centered">
+					{% load static %}
+					<img src='{% static "static_img/elTeam.jpg" %}' alt="elTeam" height="300px" width="300px" id="imgTeam">
+					<h1>Saludos, Somos Guardianes del Calabozo UPP</h1>
+					<p>¡Ven y diviértete! Espacio dedicado a ser un centro de reunion donde puedes disfrutar de un espacio para discutir sobre juegos como; TCG’s (Yo-Gi-Oh, Weiss Schwarz, Pokemon) Juegos de mesa (Catan, King of Tokio y mas) Videojuegos (maquinas Arcade).</p>
+					<p>Porfavor, registrate <a href="{% url 'registro:registro' %}"> aquí</a> para enterarte de todo lo que pasa en nuestra Comunidad.</p>
+
+				</div><!-- /col-lg-8 -->
+			</div><!-- /row -->
+
+	    </div> <!-- /container -->
+	</div><!-- /ww -->
+{% endblock %}
